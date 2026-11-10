@@ -31,13 +31,13 @@
       <label for="stacks">Number of stacks</label>    <!-- Label the quantity field. -->
       <input id="stacks" name="stacks" type="number" min="1" step="1" value="1" required>    <!-- Accept a positive whole number of stacks. -->
 
-      <div class="price-note" id="price-note" aria-live="polite"></div>    <!-- Announce the selected item's pair price. -->
+      <div class="price-note" id="price-note" aria-live="polite"></div>    <!-- Announce the selected item's price per stack. -->
       <button type="submit">Calculate order</button>    <!-- Calculate and display the order total. -->
       </form>    <!-- Finish the order-entry form. -->
 
     <section id="order-result" class="result-card" aria-live="polite" hidden>    <!-- Show the order summary and payment result accessibly. -->
       <h2>Your order</h2>    <!-- Label the order summary section. -->
-      <p id="order-summary"></p>    <!-- Display the selected item and number of charged pairs. -->
+      <p id="order-summary"></p>    <!-- Display the selected item and number of stacks. -->
       <p class="total-line">Total <strong id="order-total"></strong></p>    <!-- Display the total price in diamonds. -->
 
       <label for="payment">Payment in diamonds</label>    <!-- Label the customer's payment field. -->

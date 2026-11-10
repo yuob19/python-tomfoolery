@@ -1,9 +1,9 @@
-const items = {    // Define each shop item and its price per pair of stacks.
-  stone: { name: "Stone stack", pairPrice: 1 },    // Set the stone name and pair price.
-  tuff: { name: "Tuff stack", pairPrice: 3 },    // Set the tuff name and pair price.
-  granite: { name: "Granite", pairPrice: 1 },    // Set the granite name and pair price.
-  andesite: { name: "Andesite", pairPrice: 2 },    // Set the andesite name and pair price.
-  diorite: { name: "Diorite", pairPrice: 2 },    // Set the diorite name and pair price.
+const items = {    // Define each shop item and its price per stack.
+  stone: { name: "Stone stack", stackPrice: 1 },    // Set the stone name and price per stack.
+  tuff: { name: "Tuff stack", stackPrice: 3 },    // Set the tuff name and price per stack.
+  granite: { name: "Granite", stackPrice: 1 },    // Set the granite name and price per stack.
+  andesite: { name: "Andesite", stackPrice: 2 },    // Set the andesite name and price per stack.
+  diorite: { name: "Diorite", stackPrice: 2 },    // Set the diorite name and price per stack.
 };    // Finish the item price table.
 
 const form = document.querySelector("#order-form");    // Find the order form on the page.
@@ -28,7 +28,7 @@ const potionPaymentResult = document.querySelector("#potion-payment-result");   
 
 function updatePriceNote() {    // Refresh the price hint when the selected item changes.
   const item = items[itemSelect.value];    // Get the selected item's pricing information.
-  priceNote.textContent = `${item.pairPrice} diamond${item.pairPrice === 1 ? "" : "s"} per pair of stacks.`;    // Show the item's price per pair.
+  priceNote.textContent = `${item.stackPrice} diamond${item.stackPrice === 1 ? "" : "s"} per stack.`;    // Show the item's price per stack.
 }    // Finish the price hint updater.
 
 function updatePaymentResult(paymentField, totalField, resultField) {    // Recalculate payment feedback for either calculator.
@@ -69,9 +69,8 @@ form.addEventListener("submit", (event) => {    // Calculate the order when the 
   stacksInput.setCustomValidity("");    // Clear any previous custom validation message.
 
   const item = items[itemSelect.value];    // Get the selected item's name and price.
-  const pairs = Math.ceil(stacks / 2);    // Round up so every started pair of stacks is charged.
-  const total = pairs * item.pairPrice;    // Calculate the order price in diamonds.
-  orderSummary.textContent = `${stacks} stack${stacks === 1 ? "" : "s"} of ${item.name} (${pairs} charged pair${pairs === 1 ? "" : "s"})`;    // Describe the item and charged pairs.
+  const total = stacks * item.stackPrice;    // Calculate the order price from the number of stacks.
+  orderSummary.textContent = `${stacks} stack${stacks === 1 ? "" : "s"} of ${item.name}`;    // Describe the ordered item and stack count.
   orderTotal.textContent = `${total} diamond${total === 1 ? "" : "s"}`;    // Display the total using the correct singular or plural.
   orderTotal.dataset.value = String(total);    // Store the numeric total for the payment calculation.
   result.hidden = false;    // Reveal the order summary and payment field.
