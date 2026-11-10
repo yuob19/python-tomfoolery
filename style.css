@@ -22,7 +22,7 @@ body {    /* Style and center the full-page layout. */
   padding: 32px 18px;    /* Keep space around the panel, including on mobile. */
   background:    /* Layer a subtle highlight over the primary blue background. */
     radial-gradient(ellipse at 50% 0%, #2676a0 0%, transparent 58%),    /* Add a soft blue highlight near the top. */
-    #2b85bc;    /* Set the page background to the requested brand color. */
+    #3c5768;    /* Set the page background to the requested brand color. */
 }    /* Finish the page layout styles. */
 
 .shop {    /* Limit the width of the calculator and center it on the page. */
@@ -70,7 +70,7 @@ h1 {    /* Style the main calculator heading. */
   border: 1px solid #000000;    /* Define the pale edge of each card. */
   border-radius: 18px;    /* Soften card corners. */
   background: #000000;    /* Contrast the forms against the blue page. */
-  box-shadow: 0 22px 65px #002b4670;    /* Lift cards gently from the background. */
+  box-shadow: 0 22px 65px #0f7fc5d5;    /* Lift cards gently from the background. */
 }    /* Finish the shared card styles. */
 
 label {    /* Make form labels clear and easy to scan. */
