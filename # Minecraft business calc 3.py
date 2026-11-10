@@ -1,5 +1,5 @@
 # Minecraft business calc 3.0 stone edition
-# dev note, HELP ME
+# dev note, HELP ME PLEASE WORK
 # basically an reverse engineerd mc potion calc 1.0 build but with stonage.
 
 print("Welcome to the cherrywood national shop!")
