@@ -35,7 +35,7 @@ body {    /* Style and center the full-page layout. */
 
 .calculator-heading {    /* Style the headings for each shop calculator. */
   margin: 0 0 14px;    /* Separate each heading from its form. */
-  color: #000000;    /* Keep section headings clear against the blue background. */
+  color: #f1e3e3;    /* Keep section headings clear against the blue background. */
   font-size: 1.65rem;    /* Give each calculator a clear visual heading. */
 }    /* Finish the calculator heading styles. */
 
@@ -53,23 +53,23 @@ body {    /* Style and center the full-page layout. */
 
 h1 {    /* Style the main calculator heading. */
   margin: 0;    /* Align the heading cleanly with the header content. */
-  color: #000000;    /* Use white text for strong contrast on blue. */
+  color: #fcfcfc;    /* Use white text for strong contrast on blue. */
   font-size: clamp(2.2rem, 9vw, 3.4rem);    /* Scale the title to fit different screens. */
   letter-spacing: -0.05em;    /* Tighten the large heading slightly. */
 }    /* Finish the main heading styles. */
 
 .intro {    /* Style the short usage instructions. */
   margin: 10px 0 0;    /* Add a small gap above the explanatory text. */
-  color: #fff3f3;    /* Keep the instructions readable against the blue background. */
+  color: #000000;    /* Keep the instructions readable against the blue background. */
   line-height: 1.6;    /* Make the intro comfortable to read. */
 }    /* Finish the intro text styles. */
 
 .order-card,    /* Select the order form card. */
 .result-card {    /* Apply the same card appearance to the result section. */
   padding: 26px;    /* Give form fields and results room to breathe. */
-  border: 1px solid #c5dce8;    /* Define the pale edge of each card. */
+  border: 1px solid #000000;    /* Define the pale edge of each card. */
   border-radius: 18px;    /* Soften card corners. */
-  background: #f5f9fb;    /* Contrast the forms against the blue page. */
+  background: #000000;    /* Contrast the forms against the blue page. */
   box-shadow: 0 22px 65px #002b4670;    /* Lift cards gently from the background. */
 }    /* Finish the shared card styles. */
 
@@ -92,7 +92,7 @@ input {    /* Apply matching styles to the numeric input fields. */
   padding: 11px 13px;    /* Add comfortable space around field text. */
   border: 1px solid #8daaba;    /* Outline fields against the light cards. */
   border-radius: 9px;    /* Match the rounded visual style. */
-  background: #ffeaea;    /* Keep field contents on a clean white surface. */
+  background: #010101;    /* Keep field contents on a clean white surface. */
   color: #173044;    /* Use readable dark text inside fields. */
   font: inherit;    /* Match the surrounding interface typography. */
 }    /* Finish the form field styles. */
