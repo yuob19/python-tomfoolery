@@ -1,0 +1,54 @@
+{    // Start the VS Code launch configuration file.
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",    // Set the launch configuration schema version.
+    "configurations": [    // List individual server and browser launch configurations.
+        {    // Start the local HTTP server configuration.
+            "name": "Serve Minecraft Business Calc",    // Give the server configuration a recognizable name.
+            "type": "debugpy",    // Use the Python debugger to run the server module.
+            "request": "launch",    // Start a new server process.
+            "module": "http.server",    // Run Python's built-in static-file server module.
+            "args": ["8080", "--bind", "127.0.0.1"],    // Serve on port 8080, bound to this computer only.
+            "cwd": "${workspaceFolder}",    // Serve files from the opened project folder.
+            "console": "integratedTerminal"    // Show server output in VS Code's integrated terminal.
+        },    // Finish the local server configuration.
+        {    // Start the integrated browser configuration.
+            "name": "Launch Integrated Browser",    // Give the integrated browser configuration a recognizable name.
+            "request": "launch",    // Open a new browser session.
+            "type": "editor-browser",    // Use VS Code's integrated browser debugger.
+            "url": "http://127.0.0.1:8080/index.html",    // Open the locally served calculator page.
+            "webRoot": "${workspaceFolder}"    // Map browser files to the project folder for debugging.
+        },    // Finish the integrated browser configuration.
+        {    // Attach to an already-running integrated browser.
+            "name": "Attach to Integrated Browser",    // Give the attach configuration a recognizable name.
+            "request": "attach",    // Connect to an existing browser session.
+            "type": "editor-browser",    // Use VS Code's integrated browser debugger.
+            "webRoot": "${workspaceFolder}"    // Map browser files to the project folder for debugging.
+        },    // Finish the integrated browser attach configuration.
+        {    // Start the external Chrome browser configuration.
+            "name": "Launch Chrome",    // Give the Chrome configuration a recognizable name.
+            "request": "launch",    // Open a new Chrome session.
+            "type": "chrome",    // Use the Chrome debugger.
+            "url": "http://127.0.0.1:8080/index.html",    // Open the locally served calculator page.
+            "webRoot": "${workspaceFolder}"    // Map browser files to the project folder for debugging.
+        },    // Finish the Chrome browser configuration.
+        {    // Start the Python current-file debug configuration.
+            "name": "Python Debugger: Current File",    // Give the Python configuration a recognizable name.
+            "type": "debugpy",    // Use the Python debugger.
+            "request": "launch",    // Start a new debug process.
+            "program": "${file}",    // Run the currently active file.
+            "console": "integratedTerminal"    // Show program input and output in VS Code's terminal.
+        }    // Finish the Python debug configuration.
+    ],    // Finish the individual launch configurations.
+    "compounds": [    // Define launch options that start multiple configurations together.
+        {    // Start the combined website launch configuration.
+            "name": "Minecraft Business Calc (Website)",    // Name the combined website launcher.
+            "configurations": [    // List configurations to start as a group.
+                "Serve Minecraft Business Calc",    // Start the local website server first.
+                "Launch Integrated Browser"    // Open the calculator in the integrated browser.
+            ],    // Finish the compound configuration list.
+            "stopAll": true    // Stop all grouped processes when one configuration ends.
+        }    // Finish the compound website configuration.
+    ]    // Finish the compound launch configuration list.
+}    // Finish the VS Code launch configuration file.

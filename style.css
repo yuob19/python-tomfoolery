@@ -1,0 +1,167 @@
+:root {    /* Define shared page colors and base typography. */
+  color-scheme: light;    /* Tell the browser the form controls use a light theme. */
+  --brand: #014d7d;    /* Set the requested primary brand blue. */
+  --brand-light: #d7effb;    /* Set a pale blue for secondary highlights. */
+  font-family: "Segoe UI", Tahoma, sans-serif;    /* Use clear system fonts for the interface. */
+  background: var(--brand);    /* Use the brand blue as the page's main color. */
+  color: #173044;    /* Set a dark, readable default text color. */
+  font-synthesis: none;    /* Avoid browser-generated font variants. */
+  text-rendering: optimizeLegibility;    /* Improve text rendering where supported. */
+}    /* Finish the shared root styles. */
+
+* {    /* Apply predictable sizing to all elements. */
+  box-sizing: border-box;    /* Include padding and borders in element dimensions. */
+}    /* Finish the global sizing rule. */
+
+body {    /* Style and center the full-page layout. */
+  min-width: 320px;    /* Keep the layout usable on narrow phone screens. */
+  min-height: 100vh;    /* Fill at least the full height of the browser window. */
+  margin: 0;    /* Remove the browser's default body margin. */
+  display: grid;    /* Use grid to center the shop panel. */
+  place-items: center;    /* Center the content horizontally and vertically. */
+  padding: 32px 18px;    /* Keep space around the panel, including on mobile. */
+  background:    /* Layer a subtle highlight over the primary blue background. */
+    radial-gradient(ellipse at 50% 0%, #2676a0 0%, transparent 58%),    /* Add a soft blue highlight near the top. */
+    #014d7d;    /* Set the page background to the requested brand color. */
+}    /* Finish the page layout styles. */
+
+.shop {    /* Limit the width of the calculator and center it on the page. */
+  width: min(100%, 520px);    /* Fit small screens while capping desktop width. */
+}    /* Finish the shop container rule. */
+
+.shop-header {    /* Add separation below the shop introduction. */
+  margin-bottom: 24px;    /* Space the heading from the order form. */
+}    /* Finish the header spacing rule. */
+
+.eyebrow {    /* Style the small all-caps shop name. */
+  margin: 0 0 10px;    /* Keep a small gap below the shop name. */
+  color: var(--brand-light);    /* Use pale blue for contrast on the blue background. */
+  font-size: 0.75rem;    /* Keep the shop name visually secondary. */
+  font-weight: 700;    /* Make the small heading easy to read. */
+  letter-spacing: 0.16em;    /* Give the all-caps heading a spacious appearance. */
+}    /* Finish the shop-name styles. */
+
+h1 {    /* Style the main calculator heading. */
+  margin: 0;    /* Align the heading cleanly with the header content. */
+  color: #ffffff;    /* Use white text for strong contrast on blue. */
+  font-size: clamp(2.2rem, 9vw, 3.4rem);    /* Scale the title to fit different screens. */
+  letter-spacing: -0.05em;    /* Tighten the large heading slightly. */
+}    /* Finish the main heading styles. */
+
+.intro {    /* Style the short usage instructions. */
+  margin: 10px 0 0;    /* Add a small gap above the explanatory text. */
+  color: #e2f0f7;    /* Keep the instructions readable against the blue background. */
+  line-height: 1.6;    /* Make the intro comfortable to read. */
+}    /* Finish the intro text styles. */
+
+.order-card,    /* Select the order form card. */
+.result-card {    /* Apply the same card appearance to the result section. */
+  padding: 26px;    /* Give form fields and results room to breathe. */
+  border: 1px solid #c5dce8;    /* Define the pale edge of each card. */
+  border-radius: 18px;    /* Soften card corners. */
+  background: #f5f9fb;    /* Contrast the forms against the blue page. */
+  box-shadow: 0 22px 65px #002b4670;    /* Lift cards gently from the background. */
+}    /* Finish the shared card styles. */
+
+label {    /* Make form labels clear and easy to scan. */
+  display: block;    /* Place each label on its own line. */
+  margin: 18px 0 8px;    /* Separate labels from nearby fields. */
+  color: #173044;    /* Keep label text dark on the light cards. */
+  font-size: 0.92rem;    /* Set a comfortable label size. */
+  font-weight: 650;    /* Give labels enough emphasis. */
+}    /* Finish the form label styles. */
+
+.order-card label:first-child {    /* Remove excess space above the first form label. */
+  margin-top: 0;    /* Align the first label with the card's top padding. */
+}    /* Finish the first-label spacing rule. */
+
+select,    /* Style the item selector. */
+input {    /* Apply matching styles to the numeric input fields. */
+  width: 100%;    /* Make each field fill the available card width. */
+  min-height: 48px;    /* Keep controls easy to tap and click. */
+  padding: 11px 13px;    /* Add comfortable space around field text. */
+  border: 1px solid #8daaba;    /* Outline fields against the light cards. */
+  border-radius: 9px;    /* Match the rounded visual style. */
+  background: #ffffff;    /* Keep field contents on a clean white surface. */
+  color: #173044;    /* Use readable dark text inside fields. */
+  font: inherit;    /* Match the surrounding interface typography. */
+}    /* Finish the form field styles. */
+
+select:focus,    /* Show focus when the item selector is active. */
+input:focus,    /* Show focus when a number field is active. */
+button:focus-visible {    /* Show clear keyboard focus on the action button. */
+  outline: 3px solid #2676a0;    /* Draw a visible blue focus ring. */
+  outline-offset: 3px;    /* Separate the focus ring from the control edge. */
+}    /* Finish the keyboard focus styles. */
+
+.price-note {    /* Style the selected item's price hint. */
+  min-height: 25px;    /* Reserve space to prevent layout movement. */
+  margin: 12px 0 16px;    /* Separate the hint from the field and button. */
+  color: #466273;    /* Keep the hint subdued but readable. */
+  font-size: 0.9rem;    /* Set a compact supporting text size. */
+}    /* Finish the price hint styles. */
+
+button {    /* Make the calculator action prominent. */
+  width: 100%;    /* Give the button the full width of the form. */
+  min-height: 50px;    /* Make the action easy to tap. */
+  border: 0;    /* Remove the browser's default button border. */
+  border-radius: 9px;    /* Match the rounded form controls. */
+  background: var(--brand);    /* Use the requested brand blue for the main action. */
+  color: #ffffff;    /* Keep button text legible on the blue background. */
+  font: inherit;    /* Match the rest of the interface. */
+  font-weight: 750;    /* Make the action label stand out. */
+  cursor: pointer;    /* Indicate that the button is interactive. */
+}    /* Finish the button styles. */
+
+button:hover {    /* Give pointer users feedback when hovering over the action. */
+  background: #03649d;    /* Lighten the blue slightly on hover. */
+}    /* Finish the button hover state. */
+
+.result-card {    /* Separate the calculated order from the entry form. */
+  margin-top: 18px;    /* Add space above the result card. */
+}    /* Finish the result card spacing. */
+
+.result-card h2 {    /* Style the result section heading. */
+  margin: 0 0 8px;    /* Keep the heading close to its summary. */
+  color: #173044;    /* Use the dark card text color. */
+  font-size: 1.25rem;    /* Give the section heading clear hierarchy. */
+}    /* Finish the result heading styles. */
+
+.result-card p {    /* Style descriptive text in the result section. */
+  color: #466273;    /* Keep supporting text readable and subdued. */
+}    /* Finish the result paragraph styles. */
+
+.total-line {    /* Arrange the total label and amount on one line. */
+  display: flex;    /* Place the total label and value side by side. */
+  justify-content: space-between;    /* Push the amount to the right edge. */
+  align-items: baseline;    /* Align the label and amount along their text baselines. */
+  padding: 14px 0;    /* Add vertical room around the total. */
+  border-top: 1px solid #c5dce8;    /* Separate the total from the order summary. */
+  border-bottom: 1px solid #c5dce8;    /* Separate the total from the payment control. */
+}    /* Finish the total row styles. */
+
+.total-line strong {    /* Emphasize the calculated diamond amount. */
+  color: var(--brand);    /* Highlight the total using the main brand color. */
+  font-size: 1.4rem;    /* Make the price easy to spot. */
+}    /* Finish the total amount styles. */
+
+.payment-result {    /* Style the change or amount-owed message. */
+  min-height: 24px;    /* Reserve space as the payment message updates. */
+  margin-bottom: 0;    /* Align the message with the card's lower padding. */
+  color: #173044;    /* Keep payment feedback readable. */
+  font-weight: 650;    /* Emphasize the payment result. */
+}    /* Finish the payment result styles. */
+
+footer {    /* Style the closing shop message. */
+  padding: 22px 0 0;    /* Separate the message from the cards. */
+  color: #e2f0f7;    /* Keep the message legible over the blue background. */
+  text-align: center;    /* Center the closing text below the calculator. */
+  font-size: 0.9rem;    /* Keep the footer visually secondary. */
+}    /* Finish the footer styles. */
+
+@media (max-width: 420px) {    /* Adjust card padding on narrow phones. */
+  .order-card,    /* Apply the smaller padding to the order form. */
+  .result-card {    /* Apply the same smaller padding to the order results. */
+    padding: 21px;    /* Preserve room for content on narrow screens. */
+  }    /* Finish the small-screen card adjustment. */
+}    /* Finish the narrow-screen media query. */

@@ -1,0 +1,49 @@
+<!doctype html>    <!-- Declare this document as modern HTML. -->
+<html lang="en">    <!-- Set the page language for browsers and assistive technology. -->
+<head>    <!-- Start the page metadata and resource links. -->
+  <meta charset="utf-8">    <!-- Allow the page to display standard Unicode characters. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- Make the layout adapt to mobile screen widths. -->
+  <meta name="theme-color" content="#014d7d">    <!-- Set the browser UI theme to the shop's blue. -->
+  <title>Cherrywood National Shop</title>    <!-- Set the title shown in the browser tab. -->
+  <link rel="stylesheet" href="style.css">    <!-- Load the page's visual styles. -->
+  <script src="app.js" defer></script>    <!-- Load calculator behavior after the HTML is parsed. -->
+</head>    <!-- Finish the page metadata section. -->
+<body>    <!-- Start the visible page content. -->
+  <main class="shop">    <!-- Group the shop's primary content. -->
+    <header class="shop-header">    <!-- Introduce the shop and calculator. -->
+      <p class="eyebrow">CHERRYWOOD NATIONAL SHOP</p>    <!-- Show the shop name as a small heading. -->
+      <h1>Stone counter</h1>    <!-- Give the calculator its main heading. -->
+      <p class="intro">Pick your block, set the stack count, and settle up in diamonds.</p>    <!-- Explain how to use the calculator. -->
+    </header>    <!-- Finish the shop introduction. -->
+
+    <form id="order-form" class="order-card">    <!-- Collect the item and quantity for a new order. -->
+      <label for="item">Choose your block</label>    <!-- Label the item selector for users and screen readers. -->
+      <select id="item" name="item">    <!-- Let the customer choose a priced block type. -->
+        <option value="stone">Stone stack</option>    <!-- Offer stone at its configured price. -->
+        <option value="tuff">Tuff stack</option>    <!-- Offer tuff at its configured price. -->
+        <option value="granite">Granite</option>    <!-- Offer granite at its configured price. -->
+        <option value="andesite">Andesite</option>    <!-- Offer andesite at its configured price. -->
+        <option value="diorite">Diorite</option>    <!-- Offer diorite at its configured price. -->
+      </select>    <!-- Finish the item selector. -->
+
+      <label for="stacks">Number of stacks</label>    <!-- Label the quantity field. -->
+      <input id="stacks" name="stacks" type="number" min="1" step="1" value="1" required>    <!-- Accept a positive whole number of stacks. -->
+
+      <div class="price-note" id="price-note" aria-live="polite"></div>    <!-- Announce the selected item's pair price. -->
+      <button type="submit">Calculate order</button>    <!-- Calculate and display the order total. -->
+    </form>    <!-- Finish the order-entry form. -->
+
+    <section id="order-result" class="result-card" aria-live="polite" hidden>    <!-- Show the order summary and payment result accessibly. -->
+      <h2>Your order</h2>    <!-- Label the order summary section. -->
+      <p id="order-summary"></p>    <!-- Display the selected item and number of charged pairs. -->
+      <p class="total-line">Total <strong id="order-total"></strong></p>    <!-- Display the total price in diamonds. -->
+
+      <label for="payment">Payment in diamonds</label>    <!-- Label the customer's payment field. -->
+      <input id="payment" type="number" min="0" step="1" inputmode="numeric" placeholder="Enter payment">    <!-- Accept a nonnegative whole-number payment. -->
+      <p id="payment-result" class="payment-result" aria-live="polite"></p>    <!-- Announce change or the remaining balance. -->
+    </section>    <!-- Finish the order result and payment section. -->
+
+    <footer>Thanks for visiting. Come back soon!</footer>    <!-- Show a closing message. -->
+  </main>    <!-- Finish the shop's primary content. -->
+</body>    <!-- Finish the visible page content. -->
+</html>    <!-- Finish the HTML document. -->
