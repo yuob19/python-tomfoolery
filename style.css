@@ -93,7 +93,7 @@ input {    /* Apply matching styles to the numeric input fields. */
   border: 1px solid #8daaba;    /* Outline fields against the light cards. */
   border-radius: 9px;    /* Match the rounded visual style. */
   background: #fff8f8;    /* Keep field contents on a clean white surface. */
-  color: #173044;    /* Use readable dark text inside fields. */
+  color: #185689;    /* Use readable dark text inside fields. */
   font: inherit;    /* Match the surrounding interface typography. */
 }    /* Finish the form field styles. */
 
@@ -158,7 +158,7 @@ button:hover {    /* Give pointer users feedback when hovering over the action. 
 .payment-result {    /* Style the change or amount-owed message. */
   min-height: 24px;    /* Reserve space as the payment message updates. */
   margin-bottom: 0;    /* Align the message with the card's lower padding. */
-  color: #173044;    /* Keep payment feedback readable. */
+  color: #175c95;    /* Keep payment feedback readable. */
   font-weight: 650;    /* Emphasize the payment result. */
 }    /* Finish the payment result styles. */
 
