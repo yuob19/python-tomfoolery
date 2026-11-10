@@ -12,11 +12,13 @@
   <main class="shop">    <!-- Group the shop's primary content. -->
     <header class="shop-header">    <!-- Introduce the shop and calculator. -->
       <p class="eyebrow">CHERRYWOOD NATIONAL SHOP</p>    <!-- Show the shop name as a small heading. -->
-      <h1>Stone counter</h1>    <!-- Give the calculator its main heading. -->
-      <p class="intro">Pick your block, set the stack count, and settle up in diamonds.</p>    <!-- Explain how to use the calculator. -->
+      <h1>Cherrywood shop</h1>    <!-- Give the combined shop page its main heading. -->
+      <p class="intro">Price stone blocks or potions, then settle up in diamonds.</p>    <!-- Explain the calculators available on this page. -->
     </header>    <!-- Finish the shop introduction. -->
 
-    <form id="order-form" class="order-card">    <!-- Collect the item and quantity for a new order. -->
+    <section class="calculator-section" aria-labelledby="stone-heading">    <!-- Group the stone shop calculator and its result. -->
+      <h2 id="stone-heading" class="calculator-heading">Stone counter</h2>    <!-- Identify the stone calculator section. -->
+      <form id="order-form" class="order-card">    <!-- Collect the item and quantity for a new order. -->
       <label for="item">Choose your block</label>    <!-- Label the item selector for users and screen readers. -->
       <select id="item" name="item">    <!-- Let the customer choose a priced block type. -->
         <option value="stone">Stone stack</option>    <!-- Offer stone at its configured price. -->
@@ -31,7 +33,7 @@
 
       <div class="price-note" id="price-note" aria-live="polite"></div>    <!-- Announce the selected item's pair price. -->
       <button type="submit">Calculate order</button>    <!-- Calculate and display the order total. -->
-    </form>    <!-- Finish the order-entry form. -->
+      </form>    <!-- Finish the order-entry form. -->
 
     <section id="order-result" class="result-card" aria-live="polite" hidden>    <!-- Show the order summary and payment result accessibly. -->
       <h2>Your order</h2>    <!-- Label the order summary section. -->
@@ -41,7 +43,37 @@
       <label for="payment">Payment in diamonds</label>    <!-- Label the customer's payment field. -->
       <input id="payment" type="number" min="0" step="1" inputmode="numeric" placeholder="Enter payment">    <!-- Accept a nonnegative whole-number payment. -->
       <p id="payment-result" class="payment-result" aria-live="polite"></p>    <!-- Announce change or the remaining balance. -->
-    </section>    <!-- Finish the order result and payment section. -->
+      </section>    <!-- Finish the order result and payment section. -->
+    </section>    <!-- Finish the stone shop calculator section. -->
+
+    <section class="calculator-section" aria-labelledby="potion-heading">    <!-- Group the potion brewery calculator and its result. -->
+      <h2 id="potion-heading" class="calculator-heading">Potion brewery</h2>    <!-- Identify the potion calculator section. -->
+      <form id="potion-form" class="order-card">    <!-- Collect the potion type and quantity. -->
+        <label for="potion-item">Choose your potion</label>    <!-- Label the potion selector for users and screen readers. -->
+        <select id="potion-item" name="potion-item">    <!-- Let the customer choose a potion type. -->
+          <option value="fire-resistance">Fire resistance potion</option>    <!-- Offer fire resistance potions. -->
+          <option value="strength">Strength potion</option>    <!-- Offer strength potions. -->
+          <option value="invisibility">Invisibility potion</option>    <!-- Offer invisibility potions. -->
+          <option value="swiftness">Swiftness potion</option>    <!-- Offer swiftness potions. -->
+        </select>    <!-- Finish the potion selector. -->
+
+        <label for="potions">Number of potions</label>    <!-- Label the potion quantity field. -->
+        <input id="potions" name="potions" type="number" min="2" step="1" value="2" required>    <!-- Accept a quantity that will be checked for an even value. -->
+
+        <div class="price-note" id="potion-price-note" aria-live="polite"></div>    <!-- Explain the potion pricing and quantity rule. -->
+        <button type="submit">Calculate potion order</button>    <!-- Calculate and display the potion order total. -->
+      </form>    <!-- Finish the potion order-entry form. -->
+
+      <section id="potion-result" class="result-card" aria-live="polite" hidden>    <!-- Show the potion order and payment result accessibly. -->
+        <h2>Your potion order</h2>    <!-- Label the potion order summary. -->
+        <p id="potion-summary"></p>    <!-- Display the potion type and quantity. -->
+        <p class="total-line">Total <strong id="potion-total"></strong></p>    <!-- Display the potion order total in diamonds. -->
+
+        <label for="potion-payment">Payment in diamonds</label>    <!-- Label the potion order payment field. -->
+        <input id="potion-payment" type="number" min="0" step="1" inputmode="numeric" placeholder="Enter payment">    <!-- Accept a nonnegative whole-number payment. -->
+        <p id="potion-payment-result" class="payment-result" aria-live="polite"></p>    <!-- Announce potion order change or the remaining balance. -->
+      </section>    <!-- Finish the potion order result and payment section. -->
+    </section>    <!-- Finish the potion brewery calculator section. -->
 
     <footer>Thanks for visiting. Come back soon!</footer>    <!-- Show a closing message. -->
   </main>    <!-- Finish the shop's primary content. -->

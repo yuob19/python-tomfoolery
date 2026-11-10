@@ -29,6 +29,16 @@ body {    /* Style and center the full-page layout. */
   width: min(100%, 520px);    /* Fit small screens while capping desktop width. */
 }    /* Finish the shop container rule. */
 
+.calculator-section {    /* Separate the two calculators into clear page sections. */
+  margin-top: 30px;    /* Add space above each calculator. */
+}    /* Finish the calculator section spacing. */
+
+.calculator-heading {    /* Style the headings for each shop calculator. */
+  margin: 0 0 14px;    /* Separate each heading from its form. */
+  color: #ffffff;    /* Keep section headings clear against the blue background. */
+  font-size: 1.65rem;    /* Give each calculator a clear visual heading. */
+}    /* Finish the calculator heading styles. */
+
 .shop-header {    /* Add separation below the shop introduction. */
   margin-bottom: 24px;    /* Space the heading from the order form. */
 }    /* Finish the header spacing rule. */
