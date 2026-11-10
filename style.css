@@ -60,7 +60,7 @@ h1 {    /* Style the main calculator heading. */
 
 .intro {    /* Style the short usage instructions. */
   margin: 10px 0 0;    /* Add a small gap above the explanatory text. */
-  color: #000000;    /* Keep the instructions readable against the blue background. */
+  color: #fcf8f8;    /* Keep the instructions readable against the blue background. */
   line-height: 1.6;    /* Make the intro comfortable to read. */
 }    /* Finish the intro text styles. */
 
@@ -92,7 +92,7 @@ input {    /* Apply matching styles to the numeric input fields. */
   padding: 11px 13px;    /* Add comfortable space around field text. */
   border: 1px solid #8daaba;    /* Outline fields against the light cards. */
   border-radius: 9px;    /* Match the rounded visual style. */
-  background: #010101;    /* Keep field contents on a clean white surface. */
+  background: #fff8f8;    /* Keep field contents on a clean white surface. */
   color: #173044;    /* Use readable dark text inside fields. */
   font: inherit;    /* Match the surrounding interface typography. */
 }    /* Finish the form field styles. */
