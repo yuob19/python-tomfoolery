@@ -22,7 +22,7 @@ body {    /* Style and center the full-page layout. */
   padding: 32px 18px;    /* Keep space around the panel, including on mobile. */
   background:    /* Layer a subtle highlight over the primary blue background. */
     radial-gradient(ellipse at 50% 0%, #2676a0 0%, transparent 58%),    /* Add a soft blue highlight near the top. */
-    #014d7d;    /* Set the page background to the requested brand color. */
+    #2b85bc;    /* Set the page background to the requested brand color. */
 }    /* Finish the page layout styles. */
 
 .shop {    /* Limit the width of the calculator and center it on the page. */
@@ -107,7 +107,7 @@ button:focus-visible {    /* Show clear keyboard focus on the action button. */
 .price-note {    /* Style the selected item's price hint. */
   min-height: 25px;    /* Reserve space to prevent layout movement. */
   margin: 12px 0 16px;    /* Separate the hint from the field and button. */
-  color: #466273;    /* Keep the hint subdued but readable. */
+  color: #286286;    /* Keep the hint subdued but readable. */
   font-size: 0.9rem;    /* Set a compact supporting text size. */
 }    /* Finish the price hint styles. */
 
@@ -138,7 +138,7 @@ button:hover {    /* Give pointer users feedback when hovering over the action. 
 }    /* Finish the result heading styles. */
 
 .result-card p {    /* Style descriptive text in the result section. */
-  color: #466273;    /* Keep supporting text readable and subdued. */
+  color: #217ab1;    /* Keep supporting text readable and subdued. */
 }    /* Finish the result paragraph styles. */
 
 .total-line {    /* Arrange the total label and amount on one line. */
