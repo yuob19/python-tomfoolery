@@ -76,7 +76,7 @@ h1 {    /* Style the main calculator heading. */
 label {    /* Make form labels clear and easy to scan. */
   display: block;    /* Place each label on its own line. */
   margin: 18px 0 8px;    /* Separate labels from nearby fields. */
-  color: #173044;    /* Keep label text dark on the light cards. */
+  color: #2b7bbd;    /* Keep label text dark on the light cards. */
   font-size: 0.92rem;    /* Set a comfortable label size. */
   font-weight: 650;    /* Give labels enough emphasis. */
 }    /* Finish the form label styles. */
@@ -93,7 +93,7 @@ input {    /* Apply matching styles to the numeric input fields. */
   border: 1px solid #8daaba;    /* Outline fields against the light cards. */
   border-radius: 9px;    /* Match the rounded visual style. */
   background: #fff8f8;    /* Keep field contents on a clean white surface. */
-  color: #185689;    /* Use readable dark text inside fields. */
+  color: #2573b3;    /* Use readable dark text inside fields. */
   font: inherit;    /* Match the surrounding interface typography. */
 }    /* Finish the form field styles. */
 
@@ -133,7 +133,7 @@ button:hover {    /* Give pointer users feedback when hovering over the action. 
 
 .result-card h2 {    /* Style the result section heading. */
   margin: 0 0 8px;    /* Keep the heading close to its summary. */
-  color: #173044;    /* Use the dark card text color. */
+  color: #287dc4;    /* Use the dark card text color. */
   font-size: 1.25rem;    /* Give the section heading clear hierarchy. */
 }    /* Finish the result heading styles. */
 
