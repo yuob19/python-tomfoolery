@@ -35,7 +35,7 @@ body {    /* Style and center the full-page layout. */
 
 .calculator-heading {    /* Style the headings for each shop calculator. */
   margin: 0 0 14px;    /* Separate each heading from its form. */
-  color: #ffffff;    /* Keep section headings clear against the blue background. */
+  color: #000000;    /* Keep section headings clear against the blue background. */
   font-size: 1.65rem;    /* Give each calculator a clear visual heading. */
 }    /* Finish the calculator heading styles. */
 
@@ -53,14 +53,14 @@ body {    /* Style and center the full-page layout. */
 
 h1 {    /* Style the main calculator heading. */
   margin: 0;    /* Align the heading cleanly with the header content. */
-  color: #ffffff;    /* Use white text for strong contrast on blue. */
+  color: #000000;    /* Use white text for strong contrast on blue. */
   font-size: clamp(2.2rem, 9vw, 3.4rem);    /* Scale the title to fit different screens. */
   letter-spacing: -0.05em;    /* Tighten the large heading slightly. */
 }    /* Finish the main heading styles. */
 
 .intro {    /* Style the short usage instructions. */
   margin: 10px 0 0;    /* Add a small gap above the explanatory text. */
-  color: #e2f0f7;    /* Keep the instructions readable against the blue background. */
+  color: #fff3f3;    /* Keep the instructions readable against the blue background. */
   line-height: 1.6;    /* Make the intro comfortable to read. */
 }    /* Finish the intro text styles. */
 
@@ -92,7 +92,7 @@ input {    /* Apply matching styles to the numeric input fields. */
   padding: 11px 13px;    /* Add comfortable space around field text. */
   border: 1px solid #8daaba;    /* Outline fields against the light cards. */
   border-radius: 9px;    /* Match the rounded visual style. */
-  background: #ffffff;    /* Keep field contents on a clean white surface. */
+  background: #000000;    /* Keep field contents on a clean white surface. */
   color: #173044;    /* Use readable dark text inside fields. */
   font: inherit;    /* Match the surrounding interface typography. */
 }    /* Finish the form field styles. */
@@ -146,8 +146,8 @@ button:hover {    /* Give pointer users feedback when hovering over the action. 
   justify-content: space-between;    /* Push the amount to the right edge. */
   align-items: baseline;    /* Align the label and amount along their text baselines. */
   padding: 14px 0;    /* Add vertical room around the total. */
-  border-top: 1px solid #c5dce8;    /* Separate the total from the order summary. */
-  border-bottom: 1px solid #c5dce8;    /* Separate the total from the payment control. */
+  border-top: 1px solid #000000;    /* Separate the total from the order summary. */
+  border-bottom: 1px solid #000000;    /* Separate the total from the payment control. */
 }    /* Finish the total row styles. */
 
 .total-line strong {    /* Emphasize the calculated diamond amount. */
