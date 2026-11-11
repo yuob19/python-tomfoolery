@@ -43,6 +43,18 @@ function updatePaymentResult(paymentField, totalField, resultField) {    // Reca
     return;    // Stop until the payment is valid.
   }    // Finish the payment validation.
 
+const inventory = {
+  stone: 10,
+  tuff: 3,
+  granite: 1,
+  andesite: 0,
+  diorite: 0,
+  "fire-resistance": 0,
+  strength: 0,
+  invisibility: 0,
+  swiftness: 0
+};
+
   const total = Number(totalField.dataset.value);    // Read the calculated order total.
   if (payment >= total) {    // Check whether the payment covers the total.
     resultField.textContent = `Your change is ${payment - total} diamond${payment - total === 1 ? "" : "s"}.`;    // Show any change due.
